@@ -1,0 +1,25 @@
+syntax="proto3";
+package leaderProto;
+
+message BoolResponse{
+    bool result = 1;
+}
+
+message Node{
+	int32 id = 1;
+}
+
+message ClientStatus{
+	int32 id = 1;
+	bool is_leader = 2;
+	int32 leader_id = 3;
+}
+
+service RAFT {
+    rpc ping (Node) returns (BoolResponse) {}
+    rpc setLeader (Node) returns (BoolResponse) {}
+    rpc requestVote (Node) returns (BoolResponse) {}
+    rpc getLeader (Node) returns (Node) {}
+    rpc getClientStatus(Node) returns(ClientStatus) {}
+    rpc getLeaderNode(Node) returns (Node) {}
+}

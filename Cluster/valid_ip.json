@@ -1,0 +1,18 @@
+{
+    "client_map": {
+        "1": {
+            "ip": "192.168.0.202",
+            "status": "True"
+        },
+        "2": {
+            "ip": "192.168.0.201",
+            "status": "True"
+        }
+    },
+    "node_id": "1",
+    "leader_node": "1",
+    "superNodeIp": "192.168.0.9",
+    "superNodePort": "9000",
+    "currentLeader": "192.168.0.21:3000",
+    "heart_beat_interval": "2"
+}
